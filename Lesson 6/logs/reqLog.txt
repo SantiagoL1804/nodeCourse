@@ -1,0 +1,1 @@
+20230731	21:04:24	eaf79cf9-5a8b-4cc8-98cf-08d06fc40a00	/new-page.html	GET20230731	21:04:24	6c30ea4d-89d0-4bdd-ad7b-75b9b77d7c6f	/css/style.css	GET20230731	21:04:24	10fac1d2-8555-411a-b898-10eca631f62b	/img/CTA-Aposte-Agora.png	GET20230731	21:04:24	30a2668d-e466-4f4b-a45c-58acaf1ff2ab	/favicon.ico	GET20230731	21:06:54	b512f2b0-75a9-4971-83aa-77ca6b551a2e	/new-page.html	GET
