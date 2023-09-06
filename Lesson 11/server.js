@@ -39,7 +39,6 @@ app.use("/logout", require("./routes/logout"));
 
 app.use(verifyJWT);
 
-app.use(verifyRoles(1984,5150));
 app.use("/employees", require("./routes/api/employees"));
 
 app.all("*", (req, res) => {
