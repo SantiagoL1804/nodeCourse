@@ -5,11 +5,7 @@ const usersDB = {
   },
 };
 
-<<<<<<< HEAD
-const bcrypt = require("bcryptjs");
-=======
 const bcrypt = require("bcrypt");
->>>>>>> a676459fb6081902ea09aa3d71bfd3d1f59040fa
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 const fsPromises = require("fs").promises;
@@ -26,54 +22,6 @@ const handleLogin = async (req, res) => {
   if (!foundUser)
     res.status(401).json({ message: `User ${user} does not exist` });
   //evaluate password
-<<<<<<< HEAD
-  // const match = await bcrypt.compare(pwd, foundUser.password);
-  bcrypt.compare(pwd, foundUser.password, async function (err, match) {
-    if (err) console.error(err);
-    if (match) {
-      //!CREATE JWTs
-      const roles = Object.values(foundUser.roles);
-
-      const accessToken = jwt.sign(
-        { UserInfo: { username: foundUser.username, roles } },
-        process.env.ACCESS_TOKEN_SECRET,
-        { expiresIn: "30s" }
-      );
-
-      console.log("chau");
-
-      const refreshToken = jwt.sign(
-        { username: foundUser.username },
-        process.env.REFRESH_TOKEN_SECRET,
-        { expiresIn: "1d" }
-      );
-
-      //! SAVING REFRESH TOKEN WITH CURRENT USER
-      const otherUsers = usersDB.users.filter(
-        (person) => person.username !== foundUser.username
-      );
-      const currentUser = { ...foundUser, refreshToken };
-      usersDB.setUsers([...otherUsers, currentUser]);
-
-      await fsPromises.writeFile(
-        path.join(__dirname, "..", "model", "users.json"),
-        JSON.stringify(usersDB.users)
-      );
-
-      res.cookie("jwt", refreshToken, {
-        httpOnly: true,
-        sameSite: "None",
-        secure: true,
-        maxAge: 24 * 60 * 60 * 1000,
-      });
-      res.json({ accessToken });
-    } else {
-      console.log("unauthorized pass");
-      res.sendStatus(401); // Unauthorized
-    }
-  });
-
-=======
   const match = await bcrypt.compare(pwd, foundUser.password);
   if (match) {
     //!CREATE JWTs
@@ -113,7 +61,6 @@ const handleLogin = async (req, res) => {
     console.log("unauthorized pass");
     res.sendStatus(401); // Unauthorized
   }
->>>>>>> a676459fb6081902ea09aa3d71bfd3d1f59040fa
   try {
   } catch (error) {
     res.status(500).json({ message: error.message });

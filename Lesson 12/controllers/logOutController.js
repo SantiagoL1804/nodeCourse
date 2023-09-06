@@ -5,13 +5,7 @@ const usersDB = {
   },
 };
 
-<<<<<<< HEAD
-const jwt = require("jsonwebtoken");
 require("dotenv").config();
-const cookieParser = require("cookie-parser");
-=======
-require("dotenv").config();
->>>>>>> a676459fb6081902ea09aa3d71bfd3d1f59040fa
 
 const fsPromises = require("fs").promises;
 const path = require("path");

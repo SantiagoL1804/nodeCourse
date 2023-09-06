@@ -24,13 +24,8 @@ const handleRefreshToken = (req, res) => {
   jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET, (err, decoded) => {
     if (err || foundUser.username !== decoded.username)
       return res.sendStatus(403); //Forbidden
-<<<<<<< HEAD
-    const roles = Object.values(foundUser.roles);
-
-=======
 
     const roles = Object.values(foundUser.roles);
->>>>>>> a676459fb6081902ea09aa3d71bfd3d1f59040fa
     const accessToken = jwt.sign(
       { UserInfo: { username: decoded.username, roles } },
       process.env.ACCESS_TOKEN_SECRET,

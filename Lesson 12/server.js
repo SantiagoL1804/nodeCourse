@@ -6,14 +6,9 @@ const corsOptions = require("./config/corsOptions");
 const { logger } = require("./middlewares/logEvents");
 const errorHandler = require("./middlewares/errorHandler");
 const verifyJWT = require("./middlewares/verifyJWT");
-<<<<<<< HEAD
-const credentials = require("./middlewares/credentials");
-const verifyRoles = require("./middlewares/verifyRoles");
-=======
 const verifyRoles = require("./middlewares/verifyRoles");
 const credentials = require("./middlewares/credentials");
 const rolesList = require("./config/roles_list");
->>>>>>> a676459fb6081902ea09aa3d71bfd3d1f59040fa
 
 const PORT = process.env.PORT || 3500;
 
@@ -45,11 +40,8 @@ app.use("/logout", require("./routes/logout"));
 
 app.use(verifyJWT);
 
-<<<<<<< HEAD
-=======
 // app.use(verifyRoles(rolesList.Editor, rolesList.Admin));
 
->>>>>>> a676459fb6081902ea09aa3d71bfd3d1f59040fa
 app.use("/employees", require("./routes/api/employees"));
 
 app.all("*", (req, res) => {
