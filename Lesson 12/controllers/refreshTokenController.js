@@ -6,8 +6,6 @@ const usersDB = {
 };
 
 const jwt = require("jsonwebtoken");
-require("dotenv").config();
-const cookieParser = require("cookie-parser");
 
 const handleRefreshToken = (req, res) => {
   const cookies = req.cookies;
@@ -24,8 +22,8 @@ const handleRefreshToken = (req, res) => {
   jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET, (err, decoded) => {
     if (err || foundUser.username !== decoded.username)
       return res.sendStatus(403); //Forbidden
-
     const roles = Object.values(foundUser.roles);
+
     const accessToken = jwt.sign(
       { UserInfo: { username: decoded.username, roles } },
       process.env.ACCESS_TOKEN_SECRET,

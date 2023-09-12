@@ -528,6 +528,39 @@
 
 20230828	22:33:42	85e037fd-4752-4ed9-8d07-fa3dd7422553	POST	undefined	/auth
 
+<<<<<<< HEAD
+20230905	10:12:48	a4f4f010-e7f6-4800-9596-097c1c6b3fa1	POST	undefined	/register
+
+20230905	10:13:08	4c45f5f6-88f3-4f67-9c6e-16e64d7158d5	POST	undefined	/register
+
+20230905	10:25:34	372b51d4-13f7-45fc-bfb7-17a7c87cab80	POST	undefined	/register
+
+20230906	10:39:17	cfbd2ed8-ccf7-4dae-9a8c-d21a11e018c7	POST	undefined	/auth
+
+20230906	11:39:37	79586630-c802-49f7-aa57-3f27cf9885cd	POST	undefined	/register
+
+20230906	11:59:06	be1c7e5f-7ca2-420d-8675-bfb1eeb9a075	POST	undefined	/register
+
+20230906	11:59:31	e0cf9b96-d71f-4b8e-94a8-248283575324	POST	undefined	/register
+
+20230906	12:01:57	6131c393-5697-42c3-9a8f-e48a526eb2c1	POST	undefined	/register
+
+20230906	12:03:24	3785e647-178f-423c-83a8-6c8bd5ced0f6	POST	undefined	/register
+
+20230906	12:04:07	2d20c67c-1cc3-4475-917e-d04b57a09e78	POST	undefined	/register
+
+20230906	12:04:39	b0df9e2e-ef17-4998-b869-2c94f7e7de7f	POST	undefined	/register
+
+20230906	12:05:24	76c9266b-c589-43c6-b187-d478638222ad	POST	undefined	/register
+
+20230906	12:07:10	686204df-b7e5-47b4-982f-d8869b196157	POST	undefined	/register
+
+20230906	12:07:56	03b000da-6902-4218-9b4f-c0d7e632beb7	POST	undefined	/register
+
+20230906	12:08:17	f0d4d280-fb94-466d-b261-03307d064b6a	POST	undefined	/register
+
+20230906	12:21:22	f435a4e6-054b-41b9-b4d8-76350a99a96e	POST	undefined	/register
+=======
 20230904	10:57:53	e4389d9f-0049-44e9-b9fa-2ebb6a534487	GET	undefined	/
 
 20230904	10:57:53	79c1a3ab-fafb-4f5d-97ff-153087439752	GET	undefined	/css/style.css
@@ -657,4 +690,5 @@
 20230904	14:18:53	71f4d3f5-70a3-49c9-be35-0f02262906e7	GET	undefined	/refresh
 
 20230904	14:19:52	aeacf760-4a05-468f-96d7-4febaf83da52	POST	undefined	/auth
+>>>>>>> a676459fb6081902ea09aa3d71bfd3d1f59040fa
 

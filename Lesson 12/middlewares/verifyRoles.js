@@ -1,27 +1,18 @@
-const usersDB = {
-  users: require("../model/users.json"),
-  setUsers: function (data) {
-    this.users = data;
-  },
-};
-
 const verifyRoles = (...allowedRoles) => {
   return (req, res, next) => {
-    try {
-      if (!req?.roles) return res.sendStatus(401);
+    if (req?.roles) return res.sendStatus(401); // Unauthorized
 
-      const rolesArray = [...allowedRoles];
+    const rolesArray = [...allowedRoles];
+    console.log(rolesArray);
+    console.log(req.roles);
 
-      const result = req.roles
-        .map((role) => rolesArray.includes(role))
-        .find((value) => value === true);
+    const result = req.roles
+      .map((role) => rolesArray.includes(role))
+      .find((value) => value === true);
 
-      if (!result) return res.sendStatus(401);
+    if (!result) return res.sendStatus(401); // Unauthorized
 
-      next();
-    } catch (err) {
-      console.error(err);
-    }
+    next();
   };
 };
 

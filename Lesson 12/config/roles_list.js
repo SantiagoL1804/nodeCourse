@@ -1,5 +1,5 @@
 const ROLES_LIST = {
-  User: 2001,
+  user: 2001,
   Editor: 1984,
   Admin: 5150,
 };
